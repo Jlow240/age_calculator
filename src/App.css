@@ -1,0 +1,41 @@
+.App {
+  background-color: var(--Light-grey);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.age_conteiner {
+  display: grid;
+  background-color: var(--White);
+  padding: 1rem;
+  border-radius: 5% 5% 30% 5%;
+  width: 500px;
+  height: 400px;
+}
+
+.age_arrow{
+ position: relative;
+}
+
+.age_btn {
+  color: var(--Purple);
+  font-size: 60px;
+  position: absolute;
+  right: 0;
+}
+
+
+.age_counter {
+  position: relative;
+  bottom: 0;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 60px;
+}
+
+
+.age_list span {
+  color: var(--Purple);
+
+}
