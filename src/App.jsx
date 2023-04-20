@@ -1,16 +1,28 @@
+import { useState } from 'react'
 import './App.css'
+import Birthdate from './components/Birthdate'
 
 function App() {
 
+const [timeAlive, setTimeAlive] = useState()
+
+const handleDate = () => {
+
+}
+
+
 
   return (
-    <div className="App">
-      <section className='age_conteiner'>
-        <div className='age_input'>
-          <input type='date'></input>
+    <main className="App">
+      <section className='ageCounter'>
+
+        <div className='birthdate'>
+          <form className='birthdate_form' action="">
+            <input className='birthdate_input' type='date'></input>
+          </form>
         </div>
         <div className='age_arrow'>
-          <button className='age_btn'><i class='bx bxs-down-arrow-circle'></i></button>
+          <button onClick={handleDate} className='age_btn'><i class='bx bxs-down-arrow-circle'></i></button>
           <hr />
         </div>
         <div className='age_counter'>
@@ -22,7 +34,7 @@ function App() {
         </div>
 
       </section>
-    </div>
+    </main>
   )
 }
 

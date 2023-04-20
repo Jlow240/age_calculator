@@ -5,7 +5,7 @@
   height: 100vh;
 }
 
-.age_conteiner {
+.ageCounter {
   display: grid;
   background-color: var(--White);
   padding: 1rem;
