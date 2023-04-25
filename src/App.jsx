@@ -29,11 +29,11 @@ function App() {
     <main className="App">
       <article className='ageCounter'>
         <Birthdate handleSubmit={handleSubmit}/>
-        <div className='line'><div className='line2'></div></div>
+        <div className='line'><div className='line'></div></div>
         
         <div className='age_counter'>
           <ul className='age_list'>
-            <li><span>{years ===  years  ? "--" : years}</span> years</li>
+            <li><span>{years }</span> years</li>
             <li><span>{months}</span> months</li>
             <li><span>{days}</span> days</li>
           </ul>
