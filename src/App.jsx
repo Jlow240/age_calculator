@@ -3,37 +3,43 @@ import './App.css'
 import Birthdate from './components/Birthdate'
 
 function App() {
+  const [birthday, setBirthday] = useState('--')
+  const [birthmonth, setBirthmonth] = useState('--')
+  const [birthyear, setBirthyear] = useState('--')
 
-const [timeAlive, setTimeAlive] = useState()
+  const actualDate = new Date();
 
-const handleDate = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setBirthday(e.target.day.value )
+    setBirthmonth(e.target.month.value )
+    setBirthyear(e.target.year.value )
+    e.target.reset()
+  }
 
-}
-
-
+  const birth =  new Date(`${ birthyear}, ${birthmonth}, ${birthday} `)
+  
+  let dateDiference = (actualDate - birth)
+  let diferenciaEnDias = Math.floor(dateDiference / (1000 * 60 * 60 * 24));
+  let years = Math.floor(diferenciaEnDias / 365);
+  let months = Math.floor((diferenciaEnDias % 365) / 30); 
+  let days = Math.floor((diferenciaEnDias % 365) % 30);
 
   return (
     <main className="App">
-      <section className='ageCounter'>
-
-        <div className='birthdate'>
-          <form className='birthdate_form' action="">
-            <input className='birthdate_input' type='date'></input>
-          </form>
-        </div>
-        <div className='age_arrow'>
-          <button onClick={handleDate} className='age_btn'><i class='bx bxs-down-arrow-circle'></i></button>
-          <hr />
-        </div>
+      <article className='ageCounter'>
+        <Birthdate handleSubmit={handleSubmit}/>
+        <div className='line'><div className='line2'></div></div>
+        
         <div className='age_counter'>
           <ul className='age_list'>
-            <li><span>38</span> years</li>
-            <li><span>3</span> months</li>
-            <li><span>26</span> days</li>
+            <li><span>{years ===  years  ? "--" : years}</span> years</li>
+            <li><span>{months}</span> months</li>
+            <li><span>{days}</span> days</li>
           </ul>
         </div>
 
-      </section>
+      </article>
     </main>
   )
 }

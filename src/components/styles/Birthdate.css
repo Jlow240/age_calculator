@@ -1,5 +1,43 @@
 .birthdate {
-  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 320px ;
+  position: relative;
+  padding-left: 20px;
+}
+
+.input__div {
   display: flex;
   flex-direction: column;
+}
+
+.birth__input {
+  width: 80px;
+  aspect-ratio: 1/1;
+}
+
+.age_arrow {
+  position: absolute;
+  right: 25px;
+  top: 93px;
+}
+
+.age_btn {
+  color: var(--Purple);
+  font-size: 60px;
+  position: absolute;
+  right: 0;
+}
+
+.age_counter {
+  position: relative;
+  bottom: 0;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 44px;
+}
+
+.age_list span {
+  color: var(--Purple);
 }

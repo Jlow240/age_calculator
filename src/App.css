@@ -5,37 +5,24 @@
   height: 100vh;
 }
 
+
 .ageCounter {
   display: grid;
   background-color: var(--White);
   padding: 1rem;
   border-radius: 5% 5% 30% 5%;
-  width: 500px;
+  width: 320px;
   height: 400px;
 }
 
-.age_arrow{
- position: relative;
-}
-
-.age_btn {
-  color: var(--Purple);
-  font-size: 60px;
-  position: absolute;
-  right: 0;
-}
+.line{
+  min-width: 250px;
+  height: 1px;
+  overflow: hidden;
+} 
 
 
-.age_counter {
-  position: relative;
-  bottom: 0;
-  font-style: italic;
-  font-weight: 800;
-  font-size: 60px;
-}
-
-
-.age_list span {
-  color: var(--Purple);
-
-}
+.line2{
+  width: 230px;
+  border: 1px solid rgb(187, 186, 186);
+} 
