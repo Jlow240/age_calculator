@@ -3,6 +3,7 @@
   display: grid;
   place-content: center;
   height: 100vh;
+  user-select: none;
 }
 
 .ageCounter {

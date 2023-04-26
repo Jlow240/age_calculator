@@ -73,6 +73,7 @@ input[type=number] { -moz-appearance:textfield; }
   color: var(--Purple);
   font-size: 60px;
   cursor:pointer;
+  user-select: none;
 }
 
 .age_btn > i {
