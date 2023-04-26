@@ -5,24 +5,52 @@
   height: 100vh;
 }
 
-
 .ageCounter {
   display: grid;
   background-color: var(--White);
   padding: 1rem;
-  border-radius: 5% 5% 30% 5%;
-  width: 320px;
+  border-radius: 3% 3% 30% 3%;
+  min-width: 320px;
   height: 400px;
+  gap: 1rem;
+  transition: all 500ms ease-in-out;
 }
 
-.line{
+@media (min-width: 650px) {
+  .ageCounter {
+    height: 450px;
+    width: 550px;
+  }
+}
+
+.line {
   min-width: 250px;
   height: 1px;
   overflow: hidden;
-} 
+  border-bottom: 1px solid var(--Light-grey);
+}
 
+@media (min-width: 650px) {
+  .line {
+    width: 500px;
+  }
+}
 
-.line2{
-  width: 230px;
-  border: 1px solid rgb(187, 186, 186);
-} 
+.age_display {
+  padding-left: 20px;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 44px;
+  transition: all 500ms ease-in-out;
+}
+
+@media (min-width: 650px) {
+  .age_display{
+    font-size: 64px;
+    font-weight: 900;
+  }
+}
+
+.age_list span {
+  color: var(--Purple);
+}
